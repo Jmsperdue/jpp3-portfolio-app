@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
-import React from 'react';
-import About from './components/About';
-import Contact from './components/Contact';
-import Navbar from './components/Navbar';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import Testimonials from './components/Testimonials';
+import React from "react";
+import { Container, Grid } from "@material-ui/core";
+
+import Profile from "./components/Profile/Profile";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import Portfolio from "./pages/Portfolio/Portfolio";
+import Resume from "./pages/Resume/Resume";
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import "./App.css";
 
 function App() {
   return (
-    <main className="text-gray-400 bg-gray-900 body-font">
-      <Navbar />
-      <About />
-      <Projects />
-      <Skills />
-      <Testimonials />
-      <Contact />
-    </main>
+    <Container className={'top_60'}>
+      <Grid container spacing={7}>
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          lg={3}
+          md={4}>
+          <Profile />
+        </Grid>
+        <Grid item xs style={{ backgroundColor: "red" }}>
+          <Header />
+          <Router>
+            <Routes>
+              <Route path='/portfolio' element={<Portfolio/>} />
+              <Route path="/" element={<Resume />} />
+            </Routes>
+          </Router>
+          <Footer />
+        </Grid>
+      </Grid>
+    </Container>
   );
 }
 
