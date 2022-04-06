@@ -3,6 +3,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import Resume from "../assets/files/James_Perdue_Resume_APR_2022.pdf"
 
 export default {
     name: 'James Pierre Perdue III',
@@ -33,5 +34,10 @@ export default {
             text: 'My GitHub',
             icon: <GitHubIcon />,
         },
-    }
+    },
+
+    resume: Resume,
+
+    about : "",
+    
 }
