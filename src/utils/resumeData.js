@@ -38,6 +38,6 @@ export default {
 
     resume: Resume,
 
-    about : "",
+    about : "Software Engineer with proven academic excellence, professional leadership experience, and longevity. Lifelong learner driven to stay abreast of emerging technologies and solve challenging problems. \n\nSeeking Software Engineering opportunity to leverage and further develop skill set and make a positive impact.",
     
 }

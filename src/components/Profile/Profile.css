@@ -1,5 +1,5 @@
 .profile {
-    background-color:rgb(216, 212, 212) ;
+    background-color:var(--background-self-color) ;
     border-radius: 6px;
     width: 100%;
     display: inline-block;

@@ -27,10 +27,12 @@ function App() {
 
           <Router>
           <Header />
-            <Routes>
+          <div className='main-content'>
+          <Routes>
               <Route path='/portfolio' element={<Portfolio/>} />
               <Route path="/" element={<Resume />} />
             </Routes>
+          </div>
           </Router>
           <Footer />
         </Grid>

@@ -27,7 +27,7 @@ const Header = () => {
   return (
     <Navbar expand="lg" sticky="top" className="header">
       {/* Home Link */}
-      <Nav.Link as={NavLink} to="/portfolio">
+      <Nav.Link as={NavLink} to="/">
         <Navbar.Brand className="header_home">
           <HomeRounded />
         </Navbar.Brand>
