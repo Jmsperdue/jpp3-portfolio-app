@@ -11,7 +11,7 @@ const Footer = () => {
       </div>
       <div className="footer_right">
         <Typography className="footer_copyright">
-          Designed and Developed by
+          Designed and Developed by{" "}
           <a href="https://linkedin.com/in/jpp3/" target="_blank">
           {resumeData.name}
           </a>

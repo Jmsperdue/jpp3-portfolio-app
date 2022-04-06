@@ -1,24 +1,14 @@
 import React from "react";
 import {
-  Button,
-  Form,
-  FormControl,
   Nav,
   Navbar,
-  NavDropdown,
 } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
   HomeRounded,
-  SchoolRounded,
-  WorkRounded,
-  Facebook,
-  Twitter,
-  LinkedIn,
-  GitHub,
   Telegram,
 } from "@mui/icons-material";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import resumeData from "../../utils/resumeData";
 import CustomButton from "../Button/Button";
 import "./Header.css";
