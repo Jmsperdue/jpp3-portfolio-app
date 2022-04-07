@@ -137,4 +137,62 @@ export default {
           description: ["Git", "GitHub", "Bitbucket", "Docker", "VirtualBox", "Parallels"],
         },
       ],
+      projects: [
+        {
+          tag: 'React',
+          image:'../assets/images/avatar.jpg',
+          caption: 'this is the caption TODO',
+          title: 'Project 1',
+          description: 'This is my project description. TODO ',
+          links: [
+            {
+              link: 'https://www.google.com', icon: <YouTube />,
+              link: 'https://www.github.com', icon: <GitHubIcon />,
+              link: 'https://www.youtube.com', icon: <Language />
+            }
+          ]
+        },
+        {
+          tag: 'React',
+          image:'../assets/images/avatar.jpg',
+          caption: 'this is the caption TODO',
+          title: 'Project 2',
+          description: 'This is my project description. TODO ',
+          links: [
+            {
+              link: 'https://www.google.com', icon: <YouTube />,
+              link: 'https://www.google.com', icon: <GitHubIcon />,
+              link: 'https://www.google.com', icon: <Language />
+            }
+          ]
+        },
+        {
+          tag: 'Python',
+          image:'../assets/images/avatar.jpg',
+          caption: 'this is the caption TODO',
+          title: 'Project 3',
+          description: 'This is my project description. TODO ',
+          links: [
+            {
+              link: 'https://www.google.com', icon: <YouTube />,
+              link: 'https://www.google.com', icon: <GitHubIcon />,
+              link: 'https://www.google.com', icon: <Language />
+            }
+          ]
+        },
+        {
+          tag: 'Java',
+          image:'../assets/images/avatar.jpg',
+          caption: 'this is the caption TODO',
+          title: 'Project 4',
+          description: 'This is my project description. TODO ',
+          links: [
+            {
+              link: 'https://www.google.com', icon: <YouTube />,
+              link: 'https://www.google.com', icon: <GitHubIcon />,
+              link: 'https://www.google.com', icon: <Language />
+            }
+          ]
+        },
+      ],
 };
