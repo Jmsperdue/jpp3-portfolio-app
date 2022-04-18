@@ -13,7 +13,7 @@
     color: var(--main-color) !important;
   }
   /* End of tabs */
-  
+
   /* Cards */
   .customCard {
     height: 100%;
@@ -24,11 +24,11 @@
     outline-width: 0px !important;
     background-color: var(--background-self-color);
   }
-  
+
   .customCard .customCard_image {
     height: 140px;
   }
-  
+ 
   .customCard .customCard_title {
     font-weight: 500;
   }
@@ -36,24 +36,31 @@
   .customCard .customCard_caption {
     color: gray !important;
     font-weight: 400;
-  }
-  
+  }  
   /* End of cards */
-  
+
+
   /* Dialog */
   .projectDialog .projectDialog_image {
     max-height: 300px;
     width: 100%;
     object-fit: cover;
     object-position: center center;
+  
+
+  }
+  .projectDialog .MuiDialog-paper {
+    background-color: var(--background-self-color);
   }
   .projectDialog .projectDialog_description {
     margin-top: 10px !important;
     white-space: pre-line;
+
   }
   .projectDialog .projectDialog_actions {
     justify-content: center !important;
     margin-bottom: 10px;
+    background-color: var(--background-self-color);
   }
   .projectDialog .projectDialog_icon {
     color: darkslategray;
