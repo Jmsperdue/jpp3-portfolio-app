@@ -1,9 +1,8 @@
 import emailjs from "emailjs-com";
 
-const userID = "user_AEbsI145rVquxhHKepWk3";
-// const token = "67b1d1c0f32f1564028e63ee1878265a";
-const templateID = "template_6rkzj1p";
-const serviceID = "service_nlrs5qf";
+const userID = "D45dTpAQ93ZmpTvT_";
+const templateID = "template_e3lh8lz";
+const serviceID = "service_jz0h5h8";
 
 export const sendEmail = (e, setOpen) => {
   e.preventDefault();

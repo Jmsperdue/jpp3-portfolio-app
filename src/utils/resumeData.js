@@ -20,18 +20,13 @@ export default {
 
   birthday: "21 May 1988",
   email: "jmsperdue@gmail.com",
-  address: "123 Test St",
+  location: "Las Vegas, Nevada",
   phone: "702 755 7790",
   socials: {
     Facebook: {
       link: "https://facebook.com/jmsperdue",
       text: "My Facebook",
       icon: <FacebookIcon />,
-    },
-    Instagram: {
-      link: "https://instagram.com/saddy_d4ddy",
-      text: "My Instagram",
-      icon: <InstagramIcon />,
     },
     LinkedIn: {
       link: "https://linkedin.com/in/jpp3/",
@@ -48,7 +43,7 @@ export default {
   resume: Resume,
 
   about:
-    "Software Engineer with proven academic excellence, professional leadership experience, and longevity. Lifelong learner driven to stay abreast of emerging technologies and solve challenging problems. \n\nSeeking Software Engineering opportunity to leverage and further develop skill set and make a positive impact.",
+    "Software Engineer with proven academic excellence, professional leadership experience, and longevity. Lifelong learner driven to stay abreast of emerging technologies and solve challenging problems.  \n\nSeeking Software Engineering opportunity to leverage and further develop skill set and make a positive impact.\n\nFormer Marine with over ten years of Pawn and Credit Constraint Financing experience. When I'm not coding I enjoy going to concerts, reading, working out, socializing/rehoming dogs, and spending time with my family.",
 
   experiences: [
     {
@@ -149,74 +144,57 @@ export default {
   ],
   projects: [
     {
-      tag: "React",
-      images: [...portfolioImages.react.avatar],
-      title: "Project 1",
-      caption: "this is the caption TODO",
-      description: "This is my project description. TODO ",
+      tag: "Quorum",
+      images: [...portfolioImages.quorum.geomap],
+      caption: "Accessible Geographic Map for Quorum Language",
+      title: "Accessible Geographic Mapping Application",
+      description: "The Quorum programming language has features for reading data and outputting it in chart form. Our goal is to add an accessible geographic map of the United States to Quorum’s standard data science library. The user will be able to apply color to each state on the map based on data or explicit input. In addition to this, we will include some basic accessibility features, such as allowing information to be spoken aloud from a screen reader program and navigating the cells of the map using basic keyboard input.",
       links: [
         {
-          link: "https://www.google.com",
-          icon: <YouTube />,
-        },
-        {
-          link: "https://www.github.com",
-          icon: <GitHubIcon />,
-          link: "https://www.youtube.com",
-          icon: <Language />,
-        },
-      ],
-    },
-    {
-      tag: "React",
-      image: "../assets/images/avatar.jpg",
-      caption: "this is the caption TODO",
-      title: "Project 2",
-      description: "This is my project description. TODO ",
-      links: [
-        {
-          link: "https://www.google.com",
-          icon: <YouTube />,
-          link: "https://www.google.com",
-          icon: <GitHubIcon />,
-          link: "https://www.google.com",
+          link: "https://quorumlanguage.com/",
           icon: <Language />,
         },
       ],
     },
     {
       tag: "Python",
-      image: "../assets/images/avatar.jpg",
-      caption: "this is the caption TODO",
-      title: "Project 3",
-      description: "This is my project description. TODO ",
+      images: [...portfolioImages.python.mlpClassifier],
+      caption: "Made on GoogleColab",
+      title: "Multi-Layer Perceptron Classifier to detect forged banknotes",
+      description: "The Goal of our model is to take the attributes and properly seperate forged bank notes from genuine ones.",
       links: [
         {
-          link: "https://www.google.com",
-          icon: <YouTube />,
-          link: "https://www.google.com",
+          link: "https://github.com/Jmsperdue/machineLearningNoteBooks/blob/MultiLayerPerceptron/Ast6.ipynb",
           icon: <GitHubIcon />,
-          link: "https://www.google.com",
-          icon: <Language />,
+        },
+      ],
+    },
+    {
+      tag: "Python",
+      images: [...portfolioImages.python.mlpRegressor],
+      caption: "Made on GoogleColab",
+      title: "Multi-Layer Perceptron Regressor to predict Gas Mileage",
+      description: "The goal is to train both models to accurately predict MPG off of the distinct attributes of the car.",
+      links: [
+        {
+          link: "https://github.com/Jmsperdue/machineLearningNoteBooks/blob/multiLayerPerceptronRegressor/ast5.ipynb",
+          icon: <GitHubIcon />,
         },
       ],
     },
     {
       tag: "Java",
-      image: "../assets/images/avatar.jpg",
-      caption: "this is the caption TODO",
-      title: "Project 4",
-      description: "This is my project description. TODO ",
+      images: [...portfolioImages.java.espresso],
+      caption: "Compiler Construction",
+      title: "The Espresso Compiler Project",
+      description: "Gained practical experience working in existing code both independently and in groups while completing an unfinished compiler for a “simplified” version of Java. To maintain academic honesty code can be presented upon request.",
       links: [
         {
-          link: "https://www.google.com",
-          icon: <YouTube />,
-          link: "https://www.google.com",
-          icon: <GitHubIcon />,
-          link: "https://www.google.com",
+          link: "http://www.egr.unlv.edu/~matt/teaching/CSC460/Espresso.pdf",
           icon: <Language />,
         },
       ],
     },
   ],
+  
 };

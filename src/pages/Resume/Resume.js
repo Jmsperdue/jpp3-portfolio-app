@@ -23,6 +23,23 @@ import { sendEmail } from "../../utils/emailer.js";
 import { Alert } from "@material-ui/lab";
 
 const Resume = () => {
+  const [open, setOpen] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e) => {
+    sendEmail(e)
+      .then((res) => {
+        res === "true" ? setOpen("true") : setOpen("error");
+      })
+      .then(() => {
+        setName("");
+        setEmail("");
+        setMessage("");
+      });
+  };
+
   return (
     <>
       {/* About Me */}
@@ -214,79 +231,123 @@ const Resume = () => {
       </Grid>
 
       {/* Contact */}
-      <Grid container className="section pt_45 pb_45">
-        {/* Left Contact form */}
-        <Grid item xs={12} lg={7}>
-          <Grid container>
-            <Grid item className="section_title mb_30">
-              <span></span>
-              <h6 className="section_title_text">Contact Form</h6>
+      <form onSubmit={handleSubmit}>
+        <Grid
+          container
+          spacing={6}
+          id={"contact"}
+          className="section pt_45 pb_45"
+        >
+          {/* Left Contact form */}
+          <Grid item xs={12} lg={7}>
+            <Grid container>
+              <Grid item className="section_title mb_30">
+                <span></span>
+                <h6 className="section_title_text">Contact Form</h6>
+              </Grid>
+
+              <Grid item xs={12}>
+                <Grid container spacing={3}>
+                  <Grid item xs={12} sm={6}>
+                    <TextField
+                      fullWidth
+                      name="user_name"
+                      label="Name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      required
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={6}>
+                    <TextField
+                      fullWidth
+                      name="user_email"
+                      label="E-mail"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                    />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <TextField
+                      fullWidth
+                      name="message"
+                      label="Message"
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      required
+                      multiline
+                      rows={4}
+                    />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <CustomButton type="submit" text="Submit" />
+                  </Grid>
+                </Grid>
+              </Grid>
             </Grid>
-            <Grid item xs={12}>
-              <Grid container spacing={3}>
-                <Grid item xs={12} sm={6}>
-                  <TextField fullWidth name="name" label="Name" />
+          </Grid>
+
+          {/* right Contact info */}
+          <Grid item xs={12} lg={5}>
+            <Grid container>
+              <Grid item className="section_title mb_30">
+                <span></span>
+                <h6 className="section_title_text">Contact Information</h6>
+              </Grid>
+
+              <Grid item xs={12}>
+                <Grid container spacing={2}>
+                  <Grid item xs={12}>
+                    <Typography className="contactInfo_item">
+                      <span>Location: </span> {resumeData.location}
+                    </Typography>
+                  </Grid>
+                  <Grid item xs={12}>
+                    <Typography className="contactInfo_item">
+                      <span>Phone: </span> {resumeData.phone}
+                    </Typography>
+                  </Grid>
+                  <Grid item xs={12}>
+                    <Typography className="contactInfo_item">
+                      <span>E-mail: </span> {resumeData.email}
+                    </Typography>
+                  </Grid>
                 </Grid>
-                <Grid item xs={12} sm={6}>
-                  <TextField fullWidth name="email" label="E-mail" />
-                </Grid>
-                <Grid item xs={12}>
-                  <TextField
-                    fullWidth
-                    name="message"
-                    label="Message"
-                    multiline
-                    rows={4}
-                  />
-                </Grid>
-                <Grid item xs={12}>
-                  <CustomButton text="Submit" />
+              </Grid>
+
+              <Grid item xs={12}>
+                <Grid container className="contactInfo_socialsContainer">
+                  {Object.keys(resumeData.socials).map((key) => (
+                    <Grid item className="contactInfo_social">
+                      <a href={resumeData.socials[key].link}>
+                        {resumeData.socials[key].icon}
+                      </a>
+                    </Grid>
+                  ))}
                 </Grid>
               </Grid>
             </Grid>
           </Grid>
         </Grid>
-
-        {/* right Contact info */}
-        <Grid item xs={12} lg={5}>
-          <Grid container>
-            <Grid item className="section_title mb_30">
-              <span></span>
-              <h6 className="section_title_text">Contact Information</h6>
-            </Grid>
-
-            <Grid item xs={12}>
-              <Grid container spacing={2}>
-                <Grid item xs={12}>
-                  <Typography className="contactInfo_item">
-                    <span>Address: </span> {resumeData.address}
-                  </Typography>
-                </Grid>
-                <Grid item xs={12}>
-                  <Typography className="contactInfo_item">
-                    <span>Phone: </span> {resumeData.phone}
-                  </Typography>
-                </Grid>
-                <Grid item xs={12}>
-                  <Typography className="contactInfo_item">
-                    <span>E-mail: </span> {resumeData.email}
-                  </Typography>
-                </Grid>
-              </Grid>
-            </Grid>
-
-            <Grid item xs={12}>
-                <Grid container className='contactInfo_socialsContainer'>
-                    {Object.keys(resumeData.socials).map(key => (
-                        <Grid item className='contactInfo_social'>
-                            <a href={resumeData.socials[key].link} >{resumeData.socials[key].icon}</a>
-                        </Grid>
-                    ))}
-                </Grid>
-            </Grid>
-          </Grid>
-        </Grid>
-      </Grid>
+      </form>
+      {Boolean(open) && (
+        <Snackbar
+          open={Boolean(open)}
+          autoHideDuration={4000}
+          onClose={() => setOpen(false)}
+        >
+          {open === "true" ? (
+            <Alert onClose={() => setOpen(false)} severity="success">
+              Message Sent!
+            </Alert>
+          ) : (
+            <Alert onClose={() => setOpen(false)} severity="error">
+              Failed to send message.
+            </Alert>
+          )}
+        </Snackbar>
+      )}
     </>
   );
 };
