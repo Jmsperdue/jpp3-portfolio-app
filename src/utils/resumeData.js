@@ -3,7 +3,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import Resume from "../assets/files/James_Perdue_Resume_APR_2022.pdf";
+import Resume from "../assets/files/James_Perdue_Resume_OCT_2022.pdf";
 import { portfolioImages } from "./portfolioImages";
 import {
   AssignmentOutlined,
@@ -23,11 +23,6 @@ export default {
   location: "Las Vegas, Nevada",
   phone: "702 755 7790",
   socials: {
-    Facebook: {
-      link: "https://facebook.com/jmsperdue",
-      text: "My Facebook",
-      icon: <FacebookIcon />,
-    },
     LinkedIn: {
       link: "https://linkedin.com/in/jpp3/",
       text: "My LinkedIn",
@@ -69,10 +64,24 @@ export default {
     },
     {
       institute: "Paradigm IoT - Las Vegas, NV",
-      title: "Software Engineer Intern ",
+      title: "Software Engineer Intern",
       date: "January 2022 - March 2022",
       description:
         "• Implemented features for various applications in Java, PHP, and Python.\n• Wrote elegant, self-documenting code, legible and palatable for other developers.\n• Designed embedded systems software in collaboration with designers for clean interfaces and intuitive interactions and experiences.",
+    },
+    {
+      institute: "Arcata Associates, Inc. - Las Vegas, NV",
+      title: "Software Engineer",
+      date: "May 2022 - August 2022",
+      description:
+        "• Implemented software engineering projects, coordinating efforts of supporting staff utilizing C#, ASP.Net, and Visual Studio.\n• Database/Web application programming participated in development, testing, documentation, and maintenance.\n• Performed sustainment engineering and support for legacy systems and software.",
+    },
+    {
+      institute: "Clark County - Las Vegas, NV",
+      title: "Programmer Analyst",
+      date: "August 2022 - Current",
+      description:
+        "• Implemented features for various applications and social program managers in Java, Javascript, and React.\n• Scripted in SQL, ensured reliability, and data integrity of databases.\n• Supported various social service programs and systems to ensure a quality experience and product for internal and external customers.",
     },
   ],
 
