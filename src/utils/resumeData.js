@@ -3,7 +3,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import Resume from "../assets/files/James_Perdue_Resume_APR_2022.pdf";
+import Resume from "../assets/files/James_Perdue_Resume_MAR_2024.pdf";
 import { portfolioImages } from "./portfolioImages";
 import {
   AssignmentOutlined,
@@ -23,11 +23,6 @@ export default {
   location: "Las Vegas, Nevada",
   phone: "702 755 7790",
   socials: {
-    Facebook: {
-      link: "https://facebook.com/jmsperdue",
-      text: "My Facebook",
-      icon: <FacebookIcon />,
-    },
     LinkedIn: {
       link: "https://linkedin.com/in/jpp3/",
       text: "My LinkedIn",
@@ -43,7 +38,7 @@ export default {
   resume: Resume,
 
   about:
-    "Software Engineer with proven academic excellence, professional leadership experience, and longevity. Lifelong learner driven to stay abreast of emerging technologies and solve challenging problems.  \n\nSeeking Software Engineering opportunity to leverage and further develop skill set and make a positive impact.\n\nFormer Marine with over ten years of Pawn and Credit Constraint Financing experience. When I'm not coding I enjoy going to concerts, reading, working out, socializing/rehoming dogs, and spending time with my family.",
+    "Software Engineer with proven academic excellence, professional leadership experience, and longevity. Lifelong learner driven to stay abreast of emerging technologies and solve challenging problems.  \n\nSeeking Software Engineering opportunity to leverage and further develop skill set and make a positive impact.\n\nFormer Marine with over ten years of Pawn and Credit Constraint Financing experience. \n\nWhen I'm not coding I enjoy Indie/OSR Table-top RPG's, video games, concerts, reading, working out, socializing/rehoming dogs, and most importantly spending time with my family.",
 
   experiences: [
     {
@@ -69,10 +64,24 @@ export default {
     },
     {
       institute: "Paradigm IoT - Las Vegas, NV",
-      title: "Software Engineer Intern ",
+      title: "Software Engineer Intern",
       date: "January 2022 - March 2022",
       description:
         "• Implemented features for various applications in Java, PHP, and Python.\n• Wrote elegant, self-documenting code, legible and palatable for other developers.\n• Designed embedded systems software in collaboration with designers for clean interfaces and intuitive interactions and experiences.",
+    },
+    {
+      institute: "Arcata Associates, Inc. - Las Vegas, NV",
+      title: "Software Engineer",
+      date: "May 2022 - August 2022",
+      description:
+        "• Implemented defense-oriented software projects, coordinating efforts of supporting staff utilizing C#, ASP.Net, and Visual Studio.\n• Supported a WPF application written in C# that utilized MVVM and GPS technology with development, unit testing, documentation, and maintenance.\n• Performed sustainment engineering and support for legacy systems and software.",
+    },
+    {
+      institute: "Clark County - Las Vegas, NV",
+      title: "Programmer Analyst II",
+      date: "August 2022 - Current",
+      description:
+        "• Implemented features, bug fixes, and unit tests for a Social Program Manager in Java, JavaScript, and React.\n• Supported various social service programs and systems to ensure a quality experience and product for internal and external customers.\n• Supported Social Service programs and systems to deliver a quality experience and product for internal and external customers.\n• Performed sustainment engineering and support for legacy systems and software.",
     },
   ],
 
@@ -94,7 +103,7 @@ export default {
     {
       title: "Software Development",
       description:
-        "I have built a few personal projects with Python, Java, and C++",
+        "I have built a few personal projects with Python, Java, and C++, fast learner and contributer to large projects and outside the box thinker.",
       icon: <Devices />,
     },
     {
@@ -118,7 +127,7 @@ export default {
     },
     {
       title: "BACK-END",
-      description: ["Java", "Python", "C++", "PHP", "MySQL"],
+      description: ["Java", "Python", "C#" ,"C++", "Oracle SQL"],
     },
     {
       title: "CONCEPTS & METHODOLOGIES",
@@ -138,7 +147,6 @@ export default {
         "Bitbucket",
         "Docker",
         "VirtualBox",
-        "Parallels",
       ],
     },
   ],

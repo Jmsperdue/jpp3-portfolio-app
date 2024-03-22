@@ -1,6 +1,6 @@
 /* About me section */
 .aboutme_text {
-    color: darkslategray !important;
+    color: black !important;
     font: smaller !important;
     line-height: 22px !important;
     white-space: pre-line !important;
@@ -19,11 +19,11 @@
   }
   
   .resume_timeline .timeline_content .timeline_date {
-    color: darkslategray;
+    color: black;
   }
   
   .resume_timeline .timeline_content .timeline_description {
-    color: gray;
+    color: black;
     font-size: small;
     margin-top: 6px;
     white-space: pre-line;
@@ -44,7 +44,7 @@
   }
   
   .service .service_description {
-    color: #989898 !important;
+    color: black!important;
     border-color: var(--main-color) !important;
     margin-right: 5px !important;
     text-align: center;
@@ -77,7 +77,7 @@
   .skill .skill_description {
     display: flex;
     align-items: center;
-    color: #989898 !important;
+    color: black !important;
     font-weight: 400 !important;
     line-height: 18px !important;
   }
@@ -91,7 +91,7 @@
   /* Contact Section */
   .contactInfo_item {
     font-size: 14px !important;
-    color: #787878;
+    color: black;
     line-height: 34px !important;
   }
   
