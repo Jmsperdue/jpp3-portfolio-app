@@ -8,7 +8,8 @@
   
   .header .header_navlink {
     padding: 0;
-  }
+    color:black !important
+      }
   
   .header .header_link {
     font-weight: 500 !important;

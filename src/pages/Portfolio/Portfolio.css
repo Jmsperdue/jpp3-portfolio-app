@@ -34,7 +34,7 @@
   }
   
   .customCard .customCard_caption {
-    color: gray !important;
+    color: black !important;
     font-weight: 400;
   }  
   /* End of cards */
@@ -63,7 +63,7 @@
     background-color: var(--background-self-color);
   }
   .projectDialog .projectDialog_icon {
-    color: darkslategray;
+    color: black;
     margin: 0px 12px;
     cursor: pointer;
   }
